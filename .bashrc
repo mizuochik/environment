@@ -1,4 +1,4 @@
-[ -f ~/.bashrc_private ] && . ~/.bashrc_private
+[ -r ~/.bashrc_private ] && . ~/.bashrc_private
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
