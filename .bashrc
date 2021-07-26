@@ -9,3 +9,5 @@ shopt -u histappend
 export PATH=$PATH:~/bin
 
 alias ls="ls -GF"
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
