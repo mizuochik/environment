@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Visual Studio Light",
+    "window.titleBarStyle": "native",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.editor.tabCloseButton": "off",
+    "window.nativeTabs": true,
+    "editor.suggestSelection": "first",
+    "workbench.editor.showTabs": false,
+    "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "SF Mono",
+    "editor.fontSize": 11,
+    "files.autoSave": "onFocusChange",
+    "workbench.startupEditor": "none"
+}
