@@ -10,4 +10,6 @@ export PATH=$PATH:~/bin
 
 alias ls="ls -GF"
 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+BREW_PREFIX=$(brew --prefix)
+[ -r $BREW_PREFIX/etc/bash_completion ] && . $BREW_PREFIX/etc/bash_completion
+[ -r $BREW_PREFIX/etc/bash_completion.d/git-completion.bash ] && . $BREW_PREFIX/etc/bash_completion.d/git-completion.bash
