@@ -2,6 +2,7 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
+export EDITOR=nano
 
 export PROMPT_COMMAND="history -a && history -c && history -r"
 shopt -u histappend
