@@ -1,0 +1,5 @@
+[user]
+	email = keitam913@yahoo.co.jp
+	name = Keita Mizuochi
+[core]
+	excludesfile = /Users/kmizuoch/.gitignore_global
