@@ -3,13 +3,16 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
 export EDITOR=nano
+export HISTSIZE=99999
 
 export PROMPT_COMMAND="history -a && history -c && history -r"
 shopt -u histappend
 
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/go/bin
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
-alias ls="ls -GF"
+alias ls="ls -F"
 
 BREW_PREFIX=$(brew --prefix)
 [[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
