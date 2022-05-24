@@ -21,3 +21,5 @@ BREW_PREFIX=$(brew --prefix)
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
+
+complete -C /usr/local/bin/terraform terraform
