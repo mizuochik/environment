@@ -8,8 +8,8 @@ export HISTSIZE=99999
 export PROMPT_COMMAND="history -a && history -c && history -r"
 shopt -u histappend
 
-export PATH=$PATH:~/bin
-export PATH=$PATH:~/go/bin
+export PATH=~/bin:$PATH
+export PATH=~/go/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 alias ls="ls -F"
