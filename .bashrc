@@ -14,9 +14,12 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 alias ls="ls -F"
 
-BREW_PREFIX=$(brew --prefix)
-[[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
-[[ -r $BREW_PREFIX/etc/bash_completion.d/git-completion.bash ]] && . $BREW_PREFIX/etc/bash_completion.d/git-completion.bash
+if which brew &> /dev/null
+then
+  BREW_PREFIX=$(brew --prefix)
+  [[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
+  [[ -r $BREW_PREFIX/etc/bash_completion.d/git-completion.bash ]] && . $BREW_PREFIX/etc/bash_completion.d/git-completion.bash
+fi
 
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
