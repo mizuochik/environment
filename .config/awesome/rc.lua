@@ -532,4 +532,4 @@ client.connect_signal("focus", function(c) c.border_color = "#0000ff" end)
 client.connect_signal("unfocus", function(c) c.border_color = "#666666" end)
 -- }}}
 
-gears.wallpaper.set("#666666")
+gears.wallpaper.set("#999999")
