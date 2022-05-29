@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Visual Studio Light",
+    "editor.lineNumbers": "off",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": false,
+    "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "hidden",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false
+}
