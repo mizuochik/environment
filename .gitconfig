@@ -2,4 +2,4 @@
 	email = keitam913@yahoo.co.jp
 	name = Mizuochi Keita
 [core]
-	excludesfile = /Users/kmizuoch/.gitignore_global
+	excludesfile = /home/mizuochik/.gitignore_global
