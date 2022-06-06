@@ -7,7 +7,7 @@
     "workbench.startupEditor": "none",
     "files.autoSave": "afterDelay",
     "editor.fontFamily": "Source Code Pro",
-    "editor.fontSize": 13,
+    "editor.fontSize": 11,
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": false,
     "window.menuBarVisibility": "toggle"
