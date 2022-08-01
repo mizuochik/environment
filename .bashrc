@@ -14,6 +14,8 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 alias ls="ls -F"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 if which brew &> /dev/null
 then
   BREW_PREFIX=$(brew --prefix)
@@ -26,7 +28,5 @@ fi
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 complete -C /usr/local/bin/terraform terraform
