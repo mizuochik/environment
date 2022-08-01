@@ -2,7 +2,7 @@
 
 set -e
 
-targets=$(find . | grep -v /.git[/$] | grep -v README.md | grep -v setup.sh)
+targets=$(find . | grep -v /.git[/$] | grep -v README.md | grep -v setup.sh | sed -e 's/^.\///g')
 for t in $targets
 do
 	destpath=$(pwd)/$t
