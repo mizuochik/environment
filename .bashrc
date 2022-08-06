@@ -10,7 +10,7 @@ shopt -u histappend
 
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 
 alias ls="ls -F"
 
