@@ -11,6 +11,7 @@ shopt -u histappend
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
+export CDPATH=.:~/Projects
 
 alias ls="ls -F"
 
@@ -25,8 +26,11 @@ fi
 
 [[ -r /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
 
+complete -C "$(brew --prefix)/bin/aws_completer" aws
+
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
 
 complete -C /usr/local/bin/terraform terraform
+. "$HOME/.cargo/env"
