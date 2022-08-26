@@ -21,3 +21,7 @@ alias py=python3
 [ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.google-application-credentials.json
+
+export PATH=/usr/local/bin:$PATH
+
+setopt share_history
