@@ -15,7 +15,7 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 export ZLE_REMOVE_SUFFIX_CHARS=
 
-alias py=python3
+export HISTSIZE=100000
 
 [ -f ~/google-cloud-sdk/path.zsh.inc ] && . ~/google-cloud-sdk/path.zsh.inc
 [ -f ~/google-cloud-sdk/completion.zsh.inc ] && . ~/google-cloud-sdk/completion.zsh.inc
@@ -25,3 +25,7 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.google-application-credentials.json
 export PATH=/usr/local/bin:$PATH
 
 setopt share_history
+
+alias cc="cargo test && cargo fix --allow-staged --allow-dirty && cargo fmt --all && cargo clippy && echo ok"
+
+export PYTHONPATH=python/*
