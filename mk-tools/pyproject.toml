@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mk_tools"
+version = "0.0"
+dependencies = ["aioboto3~=10.1"]
+
+[project.scripts]
+aws-set-my-ip = "mk_tools.aws_set_my_ip:main"
+
+
+[tool.setuptools.packages.find]
+include = ["mk_tools*"]
+
+[tool.setuptools.package-data]
+mk_tools = ["py.typed"]
