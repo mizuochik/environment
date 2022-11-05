@@ -3,7 +3,7 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
 export EDITOR=nano
-export HISTSIZE=99999
+export HISTSIZE=999999
 
 export PROMPT_COMMAND="history -a && history -c && history -r"
 shopt -u histappend
@@ -31,6 +31,3 @@ complete -C "$(brew --prefix)/bin/aws_completer" aws
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
-
-complete -C /usr/local/bin/terraform terraform
-. "$HOME/.cargo/env"
