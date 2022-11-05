@@ -1,16 +1,26 @@
 #!/bin/bash
 
-set -e
+set -eu
 
-targets=$(find . | grep -v /.git[/$] | grep -v README.md | grep -v setup.sh | sed -e 's/^.\///g')
-for t in $targets
+git_ignores=$(cat .gitignore | sed -E 's/^\///' | sed -E 's/\/$//')
+
+find_cmd="find . -not -path \"./.git*\" -and -not -path ./.gitignore -and -not -path ./README.md -and -not -path \"./mk-tools*\""
+for path in $git_ignores
 do
+    find_cmd="$find_cmd -and -not -path \"./$path*\""
+done
+
+eval $find_cmd | sed -E 's/\.\///' | while read t
+do
+    echo "Processing $t ..."
 	destpath=$(pwd)/$t
 	if [[ -d $t ]]
 	then
 		(
 			cd ~
-			mkdir -p "$t"
+			cmd="mkdir -p \"$t\""
+            echo $cmd
+            eval $cmd
 		)
 	elif [[ -f $t ]]
 	then
@@ -19,7 +29,7 @@ do
 			cd ~/$(dirname "$t")
 			cmd="ln -sf $destPath"
 			echo $cmd
-			$cmd
+			eval $cmd
 		)
 	fi
 done
