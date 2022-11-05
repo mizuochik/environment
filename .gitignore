@@ -1,3 +1,5 @@
 /.venv/
 *.egg-info/
 build/
+/.*_cache/
+/.ipython/
