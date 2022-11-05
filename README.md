@@ -1,2 +1,9 @@
 # environment
-Development environment settings
+
+Development environment.
+
+## Run
+
+```
+$ ./setup.sh
+```
