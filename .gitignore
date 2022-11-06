@@ -4,3 +4,4 @@ build/
 /.*_cache/
 /.ipython/
 __pycache__/
+/.env
