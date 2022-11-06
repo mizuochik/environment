@@ -10,7 +10,6 @@ dependencies = ["aioboto3~=10.1"]
 [project.scripts]
 aws-set-my-ip = "mk_tools.aws_set_my_ip:main"
 
-
 [tool.setuptools.packages.find]
 include = ["mk_tools*"]
 
