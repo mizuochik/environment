@@ -31,3 +31,5 @@ complete -C "$(brew --prefix)/bin/aws_completer" aws
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
+
+eval "$(direnv hook bash)"
