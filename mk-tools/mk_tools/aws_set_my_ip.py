@@ -3,10 +3,10 @@ from aioboto3 import Session
 import argparse
 import httpx
 import botocore.exceptions
-import pprint
 
 parser = argparse.ArgumentParser()
 parser.add_argument("sg_name")
+parser.add_argument("port", type=int)
 
 
 async def _get_my_ip() -> str:
@@ -17,14 +17,10 @@ async def _get_my_ip() -> str:
 
 async def _main() -> None:
     args = parser.parse_args()
-    name = args.sg_name
     sess = Session()
-    async with (
-        sess.client("ec2") as ec2,
-        httpx.AsyncClient() as h,
-    ):
+    async with sess.client("ec2") as ec2:
         g = await ec2.describe_security_groups()
-        sgs = [sg for sg in g["SecurityGroups"] if sg["GroupName"] == name]
+        sgs = [sg for sg in g["SecurityGroups"] if sg["GroupName"] == args.sg_name]
         if sgs:
             sg = sgs[0]
         else:
@@ -35,8 +31,8 @@ async def _main() -> None:
                 IpPermissions=[
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": 8543,
-                        "ToPort": 8543,
+                        "FromPort": args.port,
+                        "ToPort": args.port,
                         "IpRanges": [{"CidrIp": await _get_my_ip()}],
                     }
                 ],
