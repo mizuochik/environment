@@ -21,27 +21,38 @@ async def _main() -> None:
     async with sess.client("ec2") as ec2:
         g = await ec2.describe_security_groups()
         sgs = [sg for sg in g["SecurityGroups"] if sg["GroupName"] == args.sg_name]
-        if sgs:
-            sg = sgs[0]
-        else:
-            raise KeyError("not found")
-        try:
-            await ec2.authorize_security_group_ingress(
-                GroupId=sg["GroupId"],
-                IpPermissions=[
-                    {
-                        "IpProtocol": "tcp",
-                        "FromPort": args.port,
-                        "ToPort": args.port,
-                        "IpRanges": [{"CidrIp": await _get_my_ip()}],
-                    }
-                ],
-            )
-        except botocore.exceptions.ClientError as e:
-            if "Duplicate" in e.args[0]:
-                print("Already registered")
-                exit(1)
-            raise e
+        for sg in sgs:
+            last_range = [
+                ip
+                for ip in sg["IpPermissions"]
+                if any(ir.get("Description") == "MyIP" for ir in ip["IpRanges"])
+            ]
+            if last_range:
+                await ec2.revoke_security_group_ingress(
+                    GroupId=sg["GroupId"], IpPermissions=last_range
+                )
+            try:
+                await ec2.authorize_security_group_ingress(
+                    GroupId=sg["GroupId"],
+                    IpPermissions=[
+                        {
+                            "IpProtocol": "tcp",
+                            "FromPort": args.port,
+                            "ToPort": args.port,
+                            "IpRanges": [
+                                {
+                                    "CidrIp": await _get_my_ip(),
+                                    "Description": "MyIP",
+                                }
+                            ],
+                        },
+                    ],
+                )
+            except botocore.exceptions.ClientError as e:
+                if "Duplicate" in e.args[0]:
+                    print("Already registered")
+                    exit(1)
+                raise e
 
 
 def main() -> None:
