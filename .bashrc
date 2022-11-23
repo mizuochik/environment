@@ -33,3 +33,8 @@ complete -C "$(brew --prefix)/bin/aws_completer" aws
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
 
 eval "$(direnv hook bash)"
+
+mypytest() {
+  python -m mypy $(basename $PWD | tr '-' '_') tests \
+    && python -m pytest $@ $(basename $PWD | tr '-' '_') tests
+}
