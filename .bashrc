@@ -16,7 +16,6 @@ export CDPATH=.:~/Projects
 alias ls="ls -F"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH=/usr/local/bin:$PATH
 
 if which brew &> /dev/null
 then
