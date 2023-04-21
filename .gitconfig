@@ -3,3 +3,5 @@
 	name = Mizuochi Keita
 [core]
 	excludesfile = /Users/mizuochik/.gitignore_global
+[init]
+	defaultBranch = main
