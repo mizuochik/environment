@@ -10,6 +10,7 @@ shopt -u histappend
 
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH=~/zig:$PATH
 export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 export CDPATH=.:~/Projects
 
