@@ -11,5 +11,7 @@
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": false,
     "window.menuBarVisibility": "toggle",
-    "window.newWindowDimensions": "maximized"
+    "window.newWindowDimensions": "maximized",
+    "debug.console.fontSize": 11,
+    "terminal.integrated.fontSize": 11
 }
