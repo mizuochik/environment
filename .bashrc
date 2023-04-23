@@ -8,6 +8,8 @@ export HISTSIZE=999999
 export PROMPT_COMMAND="history -a && history -c && history -r"
 shopt -u histappend
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/zig:$PATH
@@ -15,8 +17,6 @@ export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 export CDPATH=.:~/Projects
 
 alias ls="ls -F"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if which brew &> /dev/null
 then
