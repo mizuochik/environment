@@ -13,5 +13,18 @@
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "maximized",
     "debug.console.fontSize": 11,
-    "terminal.integrated.fontSize": 11
+    "terminal.integrated.fontSize": 11,
+    "cmake.configureOnOpen": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "zig.zls.path": "~/bin/zls",
+    "zig.zls.enableInlayHints": false,
+    "zig.zls.enableAutofix": false,
+    "editor.inlineSuggest.enabled": true,
+    "files.autoSaveDelay": 500,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "terminal.integrated.showExitAlert": false,
+    "zig.zls.checkForUpdate": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never"
 }
