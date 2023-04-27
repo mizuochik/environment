@@ -5,3 +5,5 @@
 	excludesfile = /Users/mizuochik/.gitignore_global
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
