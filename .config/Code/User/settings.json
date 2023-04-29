@@ -26,5 +26,8 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "terminal.integrated.showExitAlert": false,
     "zig.zls.checkForUpdate": false,
-    "terminal.integrated.shellIntegration.decorationsEnabled": "never"
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }
