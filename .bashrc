@@ -4,9 +4,10 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
 export EDITOR=nano
 export HISTSIZE=999999
+export SHELL_SESSION_HISTORY=0
 
-export PROMPT_COMMAND="history -a && history -c && history -r"
-shopt -u histappend
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -34,6 +35,8 @@ complete -C "$(brew --prefix)/bin/aws_completer" aws
 [[ -r /usr/local/share/google-cloud-sdk/completion.bash.inc ]] && . /usr/local/share/google-cloud-sdk/completion.bash.inc
 
 eval "$(direnv hook bash)"
+
+export PYTHONPATH=.:$PYTHONPATH
 
 mypytest() {
   python -m mypy $(basename $PWD | tr '-' '_') tests \
