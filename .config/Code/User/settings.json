@@ -18,7 +18,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "zig.zls.path": "~/bin/zls",
     "zig.zls.enableInlayHints": false,
-    "zig.zls.enableAutofix": false,
     "editor.inlineSuggest.enabled": true,
     "files.autoSaveDelay": 500,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
@@ -29,5 +28,12 @@
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
     "[python]": {
         "editor.formatOnType": true
+    },
+    "rust-analyzer.lens.debug.enable": false,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.semanticHighlighting.operator.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "go.enableCodeLens": {
+        "runtest": false
     }
 }
