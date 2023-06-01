@@ -1,0 +1,39 @@
+{
+    "workbench.colorTheme": "Subtraction",
+    "editor.lineNumbers": "off",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": false,
+    "workbench.startupEditor": "none",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "SF Mono",
+    "editor.fontSize": 11,
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "maximized",
+    "debug.console.fontSize": 11,
+    "terminal.integrated.fontSize": 11,
+    "cmake.configureOnOpen": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "zig.zls.path": "~/bin/zls",
+    "zig.zls.enableInlayHints": false,
+    "editor.inlineSuggest.enabled": true,
+    "files.autoSaveDelay": 500,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "terminal.integrated.showExitAlert": false,
+    "zig.zls.checkForUpdate": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "rust-analyzer.lens.debug.enable": false,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.semanticHighlighting.operator.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "go.enableCodeLens": {
+        "runtest": false
+    }
+}
