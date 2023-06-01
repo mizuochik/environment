@@ -17,8 +17,9 @@ do
 	then
 		destPath=$(pwd)/$t
 		(
-			cd ~/$(dirname "$t")
-			cmd="ln -sf $destPath"
+			target_dir=~/$(dirname "$t")
+			cd "$target_dir"
+			cmd='ln -sf "'$destPath'"'
 			echo $cmd
 			eval $cmd
 		)
