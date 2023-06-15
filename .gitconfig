@@ -2,7 +2,7 @@
 	email = keitam913@yahoo.co.jp
 	name = Mizuochi Keita
 [core]
-	excludesfile = /Users/mizuochik/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
 [pull]
