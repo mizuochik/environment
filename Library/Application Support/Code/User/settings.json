@@ -35,5 +35,8 @@
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "go.enableCodeLens": {
         "runtest": false
-    }
+    },
+    "zig.zls.buildRunnerPath": "~/src/build_runner.zig",
+    "git.openRepositoryInParentFolders": "never",
+    "zig.zigPath": "~/bin/zig"
 }
