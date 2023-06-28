@@ -19,11 +19,18 @@ export CDPATH=.:~/Projects
 
 alias ls="ls -F"
 
-if which brew &> /dev/null
+if type brew &> /dev/null
 then
   BREW_PREFIX=$(brew --prefix)
   [[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
-  [[ -r $BREW_PREFIX/etc/bash_completion.d/git-completion.bash ]] && . $BREW_PREFIX/etc/bash_completion.d/git-completion.bash
+  for completion in "$BREW_PREFIX"/etc/bash_completion.d/*
+  do
+    if [[ $(basename "$completion") = ctest ]]
+    then
+      continue
+    fi
+    [[ -r $completion ]] && . "$completion"
+  done
 fi
 
 [[ -r /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
