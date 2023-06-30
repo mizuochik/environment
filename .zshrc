@@ -24,3 +24,5 @@ setopt share_history
 export PATH=./node_modules/.bin:$PATH
 
 eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
