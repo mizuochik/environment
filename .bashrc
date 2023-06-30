@@ -32,6 +32,13 @@ then
     [[ -r $completion ]] && . "$completion"
   done
 fi
+if [[ -d ~/etc/bash_completion.d ]]
+then
+  for completion in ~/etc/bash_completion.d/*
+  do
+    [[ -r $completion ]] && source "$completion"
+  done
+fi
 
 [[ -r /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
 
