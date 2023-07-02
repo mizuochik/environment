@@ -23,14 +23,9 @@ if type brew &> /dev/null
 then
   BREW_PREFIX=$(brew --prefix)
   [[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
-  for completion in "$BREW_PREFIX"/etc/bash_completion.d/*
-  do
-    if [[ $(basename "$completion") = ctest ]]
-    then
-      continue
-    fi
-    [[ -r $completion ]] && . "$completion"
-  done
+  COMPLETION_D="$BREW_PREFIX/etc/bash_completion.d"
+  [[ -r $COMPLETION_D/git-completion.bash ]] && . "$COMPLETION_D/git-completion.bash"
+  [[ -r $COMPLETION_D/helm ]] && . "$COMPLETION_D/helm"
 fi
 if [[ -d ~/etc/bash_completion.d ]]
 then
