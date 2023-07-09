@@ -2,7 +2,7 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
-export EDITOR=nano
+export EDITOR=dew
 export HISTSIZE=999999
 export SHELL_SESSION_HISTORY=0
 
