@@ -5,7 +5,7 @@
     "workbench.statusBar.visible": false,
     "workbench.editor.showTabs": false,
     "workbench.startupEditor": "none",
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "onFocusChange",
     "editor.fontFamily": "SF Mono",
     "editor.fontSize": 11,
     "editor.minimap.enabled": false,
