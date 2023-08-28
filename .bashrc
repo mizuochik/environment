@@ -16,8 +16,10 @@ export PATH=~/go/bin:$PATH
 export PATH=~/zig:$PATH
 export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 export CDPATH=.:~/Projects
+source ~/.cargo/env
 
 alias ls="ls -F"
+alias curl="curl -s"
 
 if type brew &> /dev/null
 then
