@@ -36,7 +36,10 @@
     "go.enableCodeLens": {
         "runtest": false
     },
-    "zig.zls.buildRunnerPath": "~/src/build_runner.zig",
     "git.openRepositoryInParentFolders": "never",
-    "zig.zigPath": "~/bin/zig"
+    "zig.zigPath": "",
+    "go.toolsManagement.autoUpdate": true,
+    "go.testExplorer.enable": false,
+    "go.testExplorer.showOutput": false,
+    "go.testExplorer.concatenateMessages": false
 }
