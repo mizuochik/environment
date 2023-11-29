@@ -1,9 +1,8 @@
 {
     "workbench.colorTheme": "Subtraction",
     "editor.lineNumbers": "off",
-    "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": false,
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
     "workbench.startupEditor": "none",
     "files.autoSave": "onFocusChange",
     "editor.fontFamily": "SF Mono",
@@ -16,7 +15,7 @@
     "terminal.integrated.fontSize": 11,
     "cmake.configureOnOpen": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "zig.zls.path": "~/bin/zls",
+    "zig.zls.path": "/usr/local/bin/zls",
     "zig.zls.enableInlayHints": false,
     "editor.inlineSuggest.enabled": true,
     "files.autoSaveDelay": 500,
@@ -41,5 +40,10 @@
     "go.toolsManagement.autoUpdate": true,
     "go.testExplorer.enable": false,
     "go.testExplorer.showOutput": false,
-    "go.testExplorer.concatenateMessages": false
+    "go.testExplorer.concatenateMessages": false,
+    "window.commandCenter": false,
+    "zig.initialSetupDone": true,
+    "zig.path": "/usr/local/bin/zig",
+    "workbench.activityBar.location": "hidden",
+    "redhat.telemetry.enabled": false
 }
