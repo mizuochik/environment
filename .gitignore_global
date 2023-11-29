@@ -7,3 +7,5 @@ tmp*
 scratch.*
 *.tmp*
 *.log
+/.env
+/.envrc
