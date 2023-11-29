@@ -45,5 +45,6 @@
     "zig.initialSetupDone": true,
     "zig.path": "/usr/local/bin/zig",
     "workbench.activityBar.location": "hidden",
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "zig.zls.enableBuildOnSave": true
 }
