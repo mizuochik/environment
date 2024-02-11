@@ -9,3 +9,6 @@ scratch.*
 *.log
 /.env
 /.envrc
+\#*
+.*
+/backlog.md
