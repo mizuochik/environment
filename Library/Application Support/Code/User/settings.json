@@ -46,5 +46,10 @@
     "zig.path": "/usr/local/bin/zig",
     "workbench.activityBar.location": "hidden",
     "redhat.telemetry.enabled": false,
-    "zig.zls.enableBuildOnSave": true
+    "zig.zls.enableBuildOnSave": true,
+    "zig.zls.inlayHintsShowParameterName": false,
+    "zig.zls.inlayHintsShowBuiltin": false,
+    "zig.zls.inlayHintsShowVariableDeclaration": false,
+    "zig.zls.inlayHintsExcludeSingleArgument": false,
+    "solidity.telemetry": true
 }
