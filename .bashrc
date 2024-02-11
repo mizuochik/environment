@@ -2,7 +2,7 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$ "
-export EDITOR=dew
+export EDITOR=nano
 export HISTSIZE=999999
 export SHELL_SESSION_HISTORY=0
 
@@ -53,3 +53,8 @@ mypytest() {
   python -m mypy $(basename $PWD | tr '-' '_') tests \
     && python -m pytest $@ $(basename $PWD | tr '-' '_') tests
 }
+
+export PATH="$PATH:~/.foundry/bin"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
