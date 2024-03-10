@@ -6,10 +6,33 @@ export EDITOR=nano
 export HISTSIZE=999999
 export SHELL_SESSION_HISTORY=0
 
-shopt -s histappend
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+set_title() {
+  local title=$1
+  echo -ne "\033]0;$title\a"
+}
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+show_cwd() {
+  if [[ $PWD = $HOME ]]
+  then
+    echo '~/'
+  else
+    echo "(basename $PWD)/"
+  fi
+}
+
+show_command() {
+  case "$BASH_COMMAND" in
+  *\033]0*)
+    ;;
+  *)
+    set_title "! $BASH_COMMAND"
+    ;;
+  esac
+}
+trap show_command DEBUG
+
+shopt -s histappend
+export PROMPT_COMMAND='history -a; history -c; history -r; set_title $(show_cwd)'
 
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
