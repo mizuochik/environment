@@ -12,3 +12,4 @@ scratch.*
 \#*
 .*
 /backlog.md
+*.save
