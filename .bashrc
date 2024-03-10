@@ -54,11 +54,14 @@ then
   [[ -r $COMPLETION_D/helm ]] && . "$COMPLETION_D/helm"
   complete -C "$(brew --prefix)/bin/aws_completer" aws
 fi
-if [[ -d ~/etc/bash_completion.d ]]
+if [[ -d /etc/bash_completion.d ]]
 then
-  for completion in ~/etc/bash_completion.d/*
+  for completion in /etc/bash_completion.d/*
   do
-    [[ -r $completion ]] && source "$completion"
+    if [[ -r $completion ]]
+    then
+      source "$completion"
+    fi
   done
 fi
 
