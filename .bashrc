@@ -24,10 +24,12 @@ alias curl="curl -s"
 if type brew &> /dev/null
 then
   BREW_PREFIX=$(brew --prefix)
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   [[ -r $BREW_PREFIX/etc/bash_completion ]] && . $BREW_PREFIX/etc/bash_completion
   COMPLETION_D="$BREW_PREFIX/etc/bash_completion.d"
   [[ -r $COMPLETION_D/git-completion.bash ]] && . "$COMPLETION_D/git-completion.bash"
   [[ -r $COMPLETION_D/helm ]] && . "$COMPLETION_D/helm"
+  complete -C "$(brew --prefix)/bin/aws_completer" aws
 fi
 if [[ -d ~/etc/bash_completion.d ]]
 then
@@ -39,7 +41,6 @@ fi
 
 [[ -r /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
 
-complete -C "$(brew --prefix)/bin/aws_completer" aws
 
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
