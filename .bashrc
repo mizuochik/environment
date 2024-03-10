@@ -16,7 +16,7 @@ show_cwd() {
   then
     echo '~/'
   else
-    echo "(basename $PWD)/"
+    echo "$(basename $PWD)/"
   fi
 }
 
