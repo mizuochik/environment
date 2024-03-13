@@ -8,7 +8,7 @@ export SHELL_SESSION_HISTORY=0
 
 set_title() {
   local title=$1
-  echo -ne "\033]0;$title\a"
+  echo -ne "\e]0;$title\a"
 }
 
 show_cwd() {
@@ -32,7 +32,7 @@ show_command() {
 trap show_command DEBUG
 
 shopt -s histappend
-export PROMPT_COMMAND='history -a; history -c; history -r; set_title $(show_cwd)'
+export PROMPT_COMMAND='history -a && history -c && history -r && set_title $(show_cwd)'
 
 export PATH=~/bin:$PATH
 export PATH=~/go/bin:$PATH
@@ -66,7 +66,6 @@ then
 fi
 
 [[ -r /usr/share/git/completion/git-completion.bash ]] && . /usr/share/git/completion/git-completion.bash
-
 
 # gcloud
 [[ -r /usr/local/share/google-cloud-sdk/path.bash.inc ]] && . /usr/local/share/google-cloud-sdk/path.bash.inc
