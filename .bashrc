@@ -88,3 +88,9 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if which /usr/bin/keychain > /dev/null
+then
+	/usr/bin/keychain -q --nogui ~/.ssh/id_ed25519
+	source ~/.keychain/$(hostname)-sh
+fi
