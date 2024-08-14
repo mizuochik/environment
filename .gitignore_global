@@ -10,6 +10,6 @@ scratch.*
 /.env
 /.envrc
 \#*
-.*
 /backlog.md
 *.save
+tsconfig.json

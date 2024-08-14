@@ -35,14 +35,12 @@ shopt -s histappend
 export PROMPT_COMMAND='history -a && history -c && history -r && set_title $(show_cwd)'
 
 export PATH=~/bin:$PATH
-export PATH=~/go/bin:$PATH
 export PATH=~/zig:$PATH
 export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 export CDPATH=.:~/Projects
 source ~/.cargo/env
 
 alias ls="ls -F"
-alias curl="curl -s"
 
 if type brew &> /dev/null
 then
@@ -88,9 +86,12 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use v20.14.0 > /dev/null
 
 if which /usr/bin/keychain > /dev/null
 then
 	/usr/bin/keychain -q --nogui ~/.ssh/id_ed25519
 	source ~/.keychain/$(hostname)-sh
 fi
+
+export PATH="$PATH:/home/mizuochik/.foundry/bin"

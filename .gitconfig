@@ -7,3 +7,10 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[credential]
+	helper = /git-credential-github-apps -privatekey /ci-secrets/github-app-datachain-ci-private-key -appid 659024 -login datachainlab
+[advice]
+	detachedHead = false
+[safe]
+	directory = /working
+	directory = /tmp
