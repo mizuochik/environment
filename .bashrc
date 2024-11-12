@@ -94,4 +94,5 @@ then
 	source ~/.keychain/$(hostname)-sh
 fi
 
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/home/mizuochik/.foundry/bin"
